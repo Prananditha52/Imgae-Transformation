@@ -6,10 +6,7 @@ class Geometric:
         pass
 
     def forward_rotate(self, image, theta):
-        """Computes the forward rotated image by and angle theta
-                image: input image
-                theta: angle to rotate the image by (in radians)
-                return the rotated image"""
+
         height = image.shape[0]
         width = image.shape[1]
         #get the resized image
@@ -38,12 +35,7 @@ class Geometric:
         return Output
 
     def reverse_rotation(self, rotated_image, theta, origin, original_shape):
-        """Computes the reverse rotated image by and angle theta
-                rotated_image: the rotated image from previous step
-                theta: angle to rotate the image by (in radians)
-                Origin: origin of the original image with respect to the rotated image
-                Original shape: Shape of the orginal image
-                return the original image"""
+  
         height1 = rotated_image.shape[0]
         width1 = rotated_image.shape[1]
         height2 = original_shape[0]
@@ -62,11 +54,7 @@ class Geometric:
         return out_rev
 
     def rotate(self, image, theta, interpolation_type):
-        """Computes the reverse rotated image by and angle theta
-                image: the input image
-                theta: angle to rotate the image by (in radians)
-                interpolation_type: type of interpolation to use (nearest_neighbor, bilinear)
-                return the original image"""
+
         height = image.shape[0]
         width = image.shape[1]
         top_left_x = 0 * np.cos(theta) - 0 * np.sin(theta)
