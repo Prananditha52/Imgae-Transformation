@@ -1,14 +1,4 @@
-"""dip_hw1.py: Starter file to run howework 1"""
 
-#Example Usage: ./dip_hw1_rotate.py -i imagename -t 1.5 -m nearest_neighbor
-#Example Usage: ./dip_hw1_rotate.py -i imagename -t 1.5 -m bilinear
-# Or:
-#Example Usage: python dip_hw1_rotate.py -i imagename.jpg -t 1.5 -m nearest_neighbor
-#Example Usage: python dip_hw1_rotate.py -i imagename.jpg -t 1.5 -m bilinear
-
-__author__      = "Pranav Mantini"
-__email__ = "pmantini@uh.edu"
-__version__ = "1.0.0"
 
 import math, cv2, sys
 import numpy as np
@@ -16,7 +6,7 @@ from Transform.geometric import Geometric
 
 
 def display_image(window_name, image):
-    """A function to display image"""
+
     cv2.namedWindow(window_name)
     cv2.imshow(window_name, image)
     cv2.waitKey(0)
@@ -50,10 +40,8 @@ def get_origin(input_shape, theta):
 
 
 def main():
-    """ The main funtion that parses input arguments, calls the approrpiate
-     interpolation method and writes the output image"""
 
-    # Parse input arguments
+
     from argparse import ArgumentParser
 
     parser = ArgumentParser()
